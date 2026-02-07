@@ -14,6 +14,7 @@ import nltk
 from collections import Counter
 import math
 import re
+import os
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -46,8 +47,13 @@ def tokenize(text):
         list: List of tokens (words)
     """
     text = text.lower()
-    text = re.sub(r'[^\w\s]', '', text)
-    tokens = text.split()
+    # Use NLTK's standard tokenizer which preserves punctuation
+    try:
+        tokens = nltk.word_tokenize(text)
+    except LookupError:
+        # Fallback if punkt not found (though it should be downloaded)
+        text = re.sub(r'[^\w\s]', '', text)
+        tokens = text.split()
     return tokens
 
 def get_ngrams(tokens, n):

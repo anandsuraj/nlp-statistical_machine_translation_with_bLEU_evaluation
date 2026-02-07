@@ -3,13 +3,13 @@
 **NLP Applications - Assignment 2 - Group 5**
 
 ## Team Members
-| Name | Student ID | Role |
-|------|------------|------|
-| **Suraj Anand** | 2024AA05731 | System Architecture & BLEU Implementation |
-| **SELVA PANDIAN S** | 2023AC05005 | Backend API & Model Integration |
-| **Shikhar Nigam** | 2024AA05691 | Frontend Development & UI/UX |
-| **NEERUMALLA KAVITHA** | 2024AA05879 | Data Preprocessing & N-gram Analysis |
-| **Karan Sharma** | 2024AB05145 | Documentation, Testing & Visualization |
+| Name | Student ID | Role | Contribution |
+|------|------------|------|--------------|
+| **Suraj Anand** | 2024AA05731 | System Architecture & BLEU Implementation | 100% |
+| **SELVA PANDIAN S** | 2023AC05005 | Backend API & Model Integration | 100% |
+| **Shikhar Nigam** | 2024AA05691 | Frontend Development & UI/UX | 100% |
+| **NEERUMALLA KAVITHA** | 2024AA05879 | Data Preprocessing & N-gram Analysis | 100% |
+| **Karan Sharma** | 2024AB05145 | Documentation, Testing & Visualization | 100% |
 
 ## Introduction
 
