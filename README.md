@@ -1,7 +1,16 @@
 # Statistical Machine Translation with BLEU Evaluation
 
-**NLP Applications - Assignment 2 - Group 5**  
-**Student Project**
+**NLP Applications - Assignment 2 - Group 5**
+
+## Team Members
+
+| Name | Student ID | Role |
+|------|------------|------|
+| **Suraj Anand** | 2024AA05731 | System Architecture & BLEU Implementation |
+| **SELVA PANDIAN S** | 2023AC05005 | Backend API & Model Integration |
+| **Shikhar Nigam** | 2024AA05691 | Frontend Development & UI/UX |
+| **NEERUMALLA KAVITHA** | 2024AA05879 | Data Preprocessing & N-gram Analysis |
+| **Karan Sharma** | 2024AB05145 | Documentation, Testing & Visualization |
 
 This project implements a Statistical Machine Translation (SMT) system with automatic BLEU score evaluation. The application provides a web-based interface for translating text between multiple languages and evaluating translation quality using the BLEU (Bilingual Evaluation Understudy) metric.
 
@@ -14,7 +23,7 @@ This project implements a Statistical Machine Translation (SMT) system with auto
 - **Modern Web Interface**: Responsive, user-friendly design
 - **Detailed Metrics**: Brevity penalty, precision tables, and quality assessment
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Backend**: Flask (Python web framework)
 - **Translation**: Google Translate API via googletrans library
@@ -22,7 +31,17 @@ This project implements a Statistical Machine Translation (SMT) system with auto
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Evaluation**: Custom BLEU score implementation
 
-## Requirements
+## Screenshot Navigation
+
+Screenshots demonstrating the application flow (Task A requirement) can be found in the `implementation_report.md` file, which includes placeholders for:
+
+1.  **Home Page**: Initial state with language selection.
+2.  **Translation Result**: Showing translated text.
+3.  **Reference Entry**: Manual input and file upload tabs.
+4.  **BLEU Results**: Distinct score display and N-gram table.
+5.  **Multiple References**: Evaluation with multiple inputs.
+
+*Note: For the best experience, please run the application locally to see the interactive UI live.*
 
 - Python 3.8+
 - pip (Python package manager)
@@ -33,7 +52,7 @@ This project implements a Statistical Machine Translation (SMT) system with auto
 ### Step 1: Clone or Navigate to Project Directory
 
 ```bash
-cd /Applications/MAMP/htdocs/bits-course/semester-3/nlp-applications/assignment/assignment2
+cd /your/project/directory
 ```
 
 ### Step 2: Create Virtual Environment (Recommended)
@@ -125,22 +144,36 @@ http://localhost:5000
 **Reference Translation**: "नमस्ते, आप आज कैसे हो?"  
 **BLEU Score**: ~0.65 (Good quality)
 
-## Project Structure
+## Project Structure (Part 1 Submission)
 
 ```
 assignment2/
-├── app.py                      # Flask backend with translation & BLEU logic
+├── app.py                      # Flask backend (Task A)
 ├── requirements.txt            # Python dependencies
-├── README.md                   # This file
+├── README.md                   # Installation & usage guide
+├── task_b_quality_improvement.pdf # Task B strategies
+├── report.md                   # Task A report
+├── vercel.json                 # Deployment config
 ├── templates/
 │   └── index.html             # Main web interface
-├── static/
-│   ├── css/
-│   │   └── style.css          # Styling
-│   └── js/
-│       └── script.js          # Frontend logic
-└── report.pdf                 # Implementation report (to be added)
+└── static/
+    ├── css/
+    │   └── style.css          # Styling
+    └── js/
+        └── script.js          # Frontend logic
 ```
+
+## Screenshot Navigation
+
+Screenshots demonstrating the application flow (Task A requirement) can be found in the `implementation_report.md` file, which includes placeholders for:
+
+1.  **Home Page**: Initial state with language selection.
+2.  **Translation Result**: Showing translated text.
+3.  **Reference Entry**: Manual input and file upload tabs.
+4.  **BLEU Results**: Distinct score display and N-gram table.
+5.  **Multiple References**: Evaluation with multiple inputs.
+
+*Note: For the best experience, please run the application locally to see the interactive UI live.*
 
 ## BLEU Score Explanation
 
