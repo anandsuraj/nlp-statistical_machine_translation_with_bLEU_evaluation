@@ -69,25 +69,15 @@ Custom implementation from scratch to strictly follow the assignment requirement
 
 **Learning**: Breaking complex algorithms into smaller steps makes implementation easier.
 
-### Challenge 2: Google Translate API Rate Limiting
-
-**Problem**: During testing, googlestrans occasionally fails or gets rate-limited.
-
-**Solution**:
-- Added try-catch error handling
-- User-friendly error messages
-- Implemented request timeout handling
-- Added loading indicators in UI
-
 **Note**: In production, would use official Google Translate API with API key and quotas.
 
-### Challenge 3: Handling Multiple Reference Translations
+### Challenge 2: Handling Multiple Reference Translations
 
 **Problem**: BLEU score with multiple references requires taking the maximum n-gram count across all references. I initially averaged them incorrectly.
 
 **Solution**: implemented maximum count logic as per the BLEU paper description.
 
-### Challenge 4: Empty or Very Short Translations
+### Challenge 3: Empty or Very Short Translations
 
 **Problem**: Division by zero errors when translation is empty or has no matches.
 
