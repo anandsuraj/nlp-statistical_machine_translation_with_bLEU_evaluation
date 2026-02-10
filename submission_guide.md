@@ -1,4 +1,4 @@
-# Submission Guide: Statistical Machine Translation (SMT) with BLEU
+# Submission Guide: SMT with BLEU Evaluation
 
 **Group 5 | NLP Assignment 2**
 
@@ -14,40 +14,53 @@
 
 ---
 
-## Documentation (The Important Stuff)
+## 2. Project Documents
 
-### 1. [Implementation Report (Task A)](report.md)
-> **What it is**: The main report explaining how we built the SMT system and the custom BLEU evaluation logic.
-> **Key Sections**:
-> - How we calculated BLEU (math explained simply)
-> - Challenges we faced (and fixed!)
-> - Screenshots of the app in action
+Here are the files you need to check:
 
-### 2. Quality Improvement Strategy (Task B)
-> **File**: `task_b_quality_improvement.pdf` (Located in root folder)
-> **What it is**: Our analysis of how to actually improve translation quality.
-> **Key Insight**: We found that using **Domain-Specific Constraints** is the most effective way to boost BLEU scores for specific tasks.
+### Implementation Report (Task A)
+**File Path**: `report.md`
+This report explains how we built the project. It covers:
+- How we calculated the BLEU score.
+- The problems we faced and how we solved them.
+- Screenshots of the application.
 
-### 3. Literature Survey (Part 2)
-> **File**: `literature_survey.pdf` (Located in root folder)
-> **Topic**: Automatic Evaluation Metrics for Statistical Machine Translation
-> **Description**: A comprehensive review of the current state of research in SMT evaluation metrics.
+### Quality Improvement Strategy (Task B)
+**File Path**: `task_b_quality_improvement.pdf` (In the root folder)
+This document explains our ideas on how to improve duplicate translation quality.
 
----
+### Literature Survey (Part 2)
+**File Path**: `part2_literature_survey.pdf` (In the root folder)
+This is a survey of different ways to evaluate Machine Translation systems.
 
-## Source Code
+### Application Screenshots
+**Folder Path**: `results/output`
+These are screenshots showing the application results.
 
-### [app.py](app.py)
-> The Flask backend. Contains the `calculate_bleu` function which is the core logic of the assignment.
-
-### [automated_evaluation.py](automated_evaluation.py)
-> A script we wrote to automatically test the system with 7 different language pairs to prove it works.
-
-### [templates/index.html](templates/index.html)
-> The frontend code. Includes the JavaScript logic for the file upload feature.
+### Live Demo
+**Link**: `https://nlpsmt.vercel.app/`
+You can check out the live version of the project here.
 
 ---
 
-## How to Run
+## 3. Code Files
 
-See [README.md](README.md) for simple setup instructions (basically just `pip install` and `python app.py`).
+### app.py
+**File Path**: `app.py`
+This is the main Python code. It handles the website and the BLEU score logic.
+
+### automated_evaluation.py
+**File Path**: `automated_evaluation.py`
+We wrote this script to test the system automatically with different languages.
+
+### index.html
+**File Path**: `templates/index.html`
+This is the HTML file for the website. It also has the JavaScript for file uploads.
+
+---
+
+## 4. How to Run
+
+1. Install the requirements: `pip install -r requirements.txt`
+2. Run the app: `python app.py`
+3. Open `http://localhost:5000` in your browser.
