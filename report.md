@@ -89,6 +89,10 @@ Custom implementation from scratch to strictly follow the assignment requirement
 
 ### 4.1 Architecture Overview
 
+The following diagram illustrates the system architecture and data flow:
+
+![SMT Architecture Diagram](results/output/architecture_flow.png)
+
 The application follows a standard MVC pattern:
 1.  **Frontend**: HTML/JS collects input.
 2.  **API**: Flask endpoints (`/translate`, `/evaluate_bleu`) process requests.
@@ -124,7 +128,8 @@ The application follows a standard MVC pattern:
 - Language selector dropdowns (8 languages supported)
 - Source text input area
 - Clear visual hierarchy
-- Professional academic styling
+
+![Home Page UI](results/output/smt_ui_localhost.png)
 
 
 
@@ -135,7 +140,9 @@ The application follows a standard MVC pattern:
 2. Selects English → Hindi
 3. Clicks "Translate" button
 4. Loading spinner appears
-5. Translation displays: "नमस्ते, आज आप कैसे हैं? मुझे उम्मीद है कि आप अच्छे होंगे।"
+5. Translation displayed
+
+![Translation Result](results/output/smt-ui-result.png)
 
 
 
@@ -153,6 +160,8 @@ The application follows a standard MVC pattern:
 - One reference per line
 - Automatically populates text areas
 
+![File Upload Interface](results/output/file_upload_ui.png)
+
 
 
 ### 5.4 BLEU Evaluation Results
@@ -166,23 +175,12 @@ The application follows a standard MVC pattern:
    - Green (>0.7): Excellent quality
 
 2. **N-gram Precision Table**:
-   ```
-   | N-gram Type | Precision | Percentage |
-   |-------------|-----------|------------|
-   | 1-gram      | 0.8571    | 85.71%     |
-   | 2-gram      | 0.6667    | 66.67%     |
-   | 3-gram      | 0.5000    | 50.00%     |
-   | 4-gram      | 0.3333    | 33.33%     |
-   ```
+   - Detailed breakdown of precision for 1-gram to 4-gram.
 
 3. **Additional Metrics**:
-   - Brevity Penalty: 1.0000
-   - Candidate Length: 14 words
-   - Reference Length: 12 words
+   - Brevity Penalty, Candidate Length, Reference Length.
 
-4. **Interpretation Guide**:
-   - Explanation of what BLEU scores mean
-   - Educational value for students
+![BLEU Score Calculation](results/output/smt_bleu_score_calculation.png)
 
 
 
@@ -243,6 +241,8 @@ We implemented an automated test script (`automated_evaluation.py`) to validate 
 - **Total Tests**: 7
 - **Success Rate**: 100% (execution)
 - **Average BLEU Score**: 0.8851
+
+![Automated Evaluation Result](results/output/automatic_evalution_result.png)
 
 **Detailed Breakdown**:
 
