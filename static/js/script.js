@@ -55,31 +55,46 @@ addReferenceBtn.addEventListener('click', () => {
 });
 
 // File upload handling
+// File upload handling
 const referenceFile = document.getElementById('reference-file');
 referenceFile.addEventListener('change', async (e) => {
     const file = e.target.files[0];
     if (file) {
-        const text = await file.text();
-        const lines = text.split('\n').filter(line => line.trim());
-        
-        // Clear existing inputs and add new ones
-        const referenceInputs = document.getElementById('reference-inputs');
-        referenceInputs.innerHTML = '';
-        
-        lines.forEach((line, index) => {
-            const inputGroup = document.createElement('div');
-            inputGroup.className = 'reference-input-group';
-            inputGroup.innerHTML = `
-                <label>Reference ${index + 1}:</label>
-                <textarea class="reference-input" rows="3">${line.trim()}</textarea>
-            `;
-            referenceInputs.appendChild(inputGroup);
-        });
-        
-        // Switch to manual tab to show loaded references
-        tabButtons[0].click();
-        
-        showSuccess(`Loaded ${lines.length} reference(s) from file`);
+        try {
+            const text = await file.text();
+            // Split by newline and filter out empty lines
+            const lines = text.split('\n').filter(line => line.trim());
+            
+            if (lines.length === 0) {
+                showError('The uploaded file is empty.');
+                return;
+            }
+
+            // Clear existing inputs and add new ones
+            const referenceInputs = document.getElementById('reference-inputs');
+            referenceInputs.innerHTML = '';
+            
+            lines.forEach((line, index) => {
+                const inputGroup = document.createElement('div');
+                inputGroup.className = 'reference-input-group';
+                inputGroup.innerHTML = `
+                    <label>Reference ${index + 1}:</label>
+                    <textarea class="reference-input" rows="3">${line.trim()}</textarea>
+                `;
+                referenceInputs.appendChild(inputGroup);
+            });
+            
+            // Switch to manual tab to show loaded references
+            tabButtons[0].click();
+            
+            showSuccess(`Successfully loaded ${lines.length} references from the file.`);
+            
+            // Clear the file input so the same file can be selected again if needed
+            e.target.value = '';
+        } catch (error) {
+            showError('Failed to read the file. Please try again.');
+            console.error(error);
+        }
     }
 });
 

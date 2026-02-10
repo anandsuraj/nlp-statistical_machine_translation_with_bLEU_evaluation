@@ -28,7 +28,7 @@ The objective of this assignment was to develop a Statistical Machine Translatio
 
 ### Approach
 
-I implemented a full-stack web application using:
+We implemented a full-stack web application using:
 - **Backend**: Python Flask framework
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Translation Service**: Google Translate API (via googletrans library)
@@ -73,7 +73,7 @@ Custom implementation from scratch to strictly follow the assignment requirement
 
 ### Challenge 2: Handling Multiple Reference Translations
 
-**Problem**: BLEU score with multiple references requires taking the maximum n-gram count across all references. I initially averaged them incorrectly.
+**Problem**: BLEU score with multiple references requires taking the maximum n-gram count across all references. We initially averaged them incorrectly.
 
 **Solution**: implemented maximum count logic as per the BLEU paper description.
 
@@ -131,7 +131,7 @@ The application follows a standard MVC pattern:
 ### 5.2 Translation Process
 
 **Steps**:
-1. User enters text: "Hello, how are you today? I hope you are doing well."
+1. User enters text: "Hello, how are you today? We hope you are doing well."
 2. Selects English → Hindi
 3. Clicks "Translate" button
 4. Loading spinner appears
@@ -251,9 +251,9 @@ We implemented an automated test script (`automated_evaluation.py`) to validate 
 | English to Hindi | The weather is beautiful today. | 1.0000 | PERFECT | 1-gram:1.0, 2-gram:1.0, 3-gram:1.0, 4-gram:1.0 |
 | English to Hindi (Complex) | Artificial intelligence creates new opportunities... | 0.5988 | PASS | 1-gram:0.9, 2-gram:0.6667, 3-gram:0.5, 4-gram:0.4286 |
 | English to French | Machine translation is useful. | 1.0000 | PERFECT | 1-gram:1.0, 2-gram:1.0, 3-gram:1.0, 4-gram:1.0 |
-| English to Spanish | I love learning new languages. | 1.0000 | PERFECT | 1-gram:1.0, 2-gram:1.0, 3-gram:1.0, 4-gram:1.0 |
+| English to Spanish | We love learning new languages. | 1.0000 | PERFECT | 1-gram:1.0, 2-gram:1.0, 3-gram:1.0, 4-gram:1.0 |
 | English to German | This is a test of the system. | 1.0000 | PERFECT | 1-gram:1.0, 2-gram:1.0, 3-gram:1.0, 4-gram:1.0 |
-| English to Italian | I would like to order a large pizza please. | 0.5969 | PASS | 1-gram:0.8889, 2-gram:0.75, 3-gram:0.5714, 4-gram:0.3333 |
+| English to Italian | We would like to order a large pizza please. | 0.5969 | PASS | 1-gram:0.8889, 2-gram:0.75, 3-gram:0.5714, 4-gram:0.3333 |
 | English to Portuguese | Thank you very much for your help. | 1.0000 | PERFECT | 1-gram:1.0, 2-gram:1.0, 3-gram:1.0, 4-gram:1.0 |
 
 **Note**: Sentences shorter than 4 words yield a BLEU score of 0.0 due to the lack of 4-grams, which is expected behavior for standard geometric-mean BLEU without smoothing.
@@ -269,7 +269,7 @@ We implemented an automated test script (`automated_evaluation.py`) to validate 
 
 **Example 2: English → Spanish**
 
-- **Source**: "I love programming and artificial intelligence."
+- **Source**: "We love programming and artificial intelligence."
 - **Translation**: "Me encanta la programación y la inteligencia artificial."
 - **Reference**: "Amo la programación y la inteligencia artificial."
 - **BLEU**: 0.6789 (Good - minor word choice difference)
@@ -317,7 +317,3 @@ In conclusion, this project successfully demonstrates the full implementation of
 2.  **More Metrics**: METEOR, TER, chrF scores
 3.  **Visualization**: Charts showing precision degradation across n-grams
 4.  **History**: Save previous translations and evaluations
-
-### 7.3 Reflection
-
-This assignment was incredibly valuable for understanding how MT evaluation works in practice. The most rewarding part was seeing the complete system work end-to-end, from user input to BLEU score display.
