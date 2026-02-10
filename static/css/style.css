@@ -345,6 +345,24 @@ textarea:focus {
     font-size: 0.9rem;
 }
 
+/* Sample File Link */
+.sample-link {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.sample-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.sample-link a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
 /* Results Section */
 .result-box {
     background: var(--bg-light);
