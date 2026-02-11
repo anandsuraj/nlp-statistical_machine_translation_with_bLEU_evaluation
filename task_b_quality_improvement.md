@@ -5,11 +5,11 @@
 ## Team Members
 | Name | Student ID | Role | Contribution |
 |------|------------|------|--------------|
-| **Suraj Anand** | 2024AA05731 | System Architecture & BLEU Implementation | 100% |
-| **SELVA PANDIAN S** | 2023AC05005 | Backend API & Model Integration | 100% |
-| **Shikhar Nigam** | 2024AA05691 | Frontend Development & UI/UX | 100% |
-| **NEERUMALLA KAVITHA** | 2024AA05879 | Data Preprocessing & N-gram Analysis | 100% |
 | **Karan Sharma** | 2024AB05145 | Documentation, Testing & Visualization | 100% |
+| **Neerumalla Kavitha** | 2024AA05879 | Data Preprocessing & N-gram Analysis | 100% |
+| **Selva Pandian S** | 2023AC05005 | Backend API & Model Integration | 100% |
+| **Shikhar Nigam** | 2024AA05691 | Frontend Development & UI/UX | 100% |
+| **Suraj Anand** | 2024AA05731 | System Architecture & BLEU Implementation | 100% |
 
 ## Introduction
 
@@ -66,8 +66,6 @@ This document analyzes three key strategies to improve BLEU scores in Statistica
 | **More Data** | High | Medium | General purpose systems |
 | **Better LM** | Medium | Low-Medium | Improving fluency |
 | **Domain Data** | High | **High** | Specialized applications |
-
-**Student Insight**: For this assignment, **Domain-Specific Data** offers the most practical path to higher BLEU scores, as it directly aligns the vocabulary and style with the test set.
 
 ---
 
