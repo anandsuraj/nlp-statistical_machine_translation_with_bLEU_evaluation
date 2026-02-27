@@ -2,7 +2,38 @@
 
 **Group 5 | NLP Applications Assignment 2**
 
-## 1. Team Members
+This repository contains a comprehensive web-based Statistical Machine Translation (SMT) workbench. It enables real-time text translation across multiple languages while providing an integrated, automated BLEU (Bilingual Evaluation Understudy) score evaluation to objectively measure translation quality against human reference texts.
+
+## 1. System Architecture & Operation
+
+The system handles everything from text ingestion and API-based translation to n-gram precision calculations and final performance scoring.
+
+### Architecture Flow
+![Architecture Flow Diagram](results/output/architecture_flow.png)
+
+### Automated Evaluation Script
+The application features a robust internal evaluation script that computes the BLEU score by comparing the generated translation against an expected reference sentence.
+![Evaluation Calculation](results/output/smt_bleu_score_calculation.png)
+![Evaluation Result](results/output/automatic_evalution_result.png)
+
+### User Interface 
+The intuitive web frontend allows users to easily input text, select target languages, and view both the translation and its detailed n-gram evaluation metrics instantly.
+![UI Localhost](results/output/smt_ui_localhost.png)
+![Translation Result Interface](results/output/smt-ui-result.png)
+
+---
+
+## 2. Real-Life Applications
+The architecture and evaluation methodologies implemented in this SMT workbench are highly relevant to modern NLP and localization industries:
+
+1. **Automated Content Localization**: E-commerce platforms and global news agencies can use similar pipelines to rapidly translate vast amounts of product descriptions or articles, using BLEU scores to flag low-quality translations for human review.
+2. **Customer Support Triage**: Multinational companies can implement SMT to translate incoming foreign-language support tickets into a common language (e.g., English) so support agents can route or answer them effectively.
+3. **Legal Document Discovery**: In international law, vast corpuses of foreign documents can be passed through customized SMT systems to quickly identify relevant evidence before paying expensive human translators for certified versions.
+4. **Machine Learning Data Augmentation**: AI researchers use established SMT models (like back-translation) to generate synthetic, multi-lingual training data to improve the robustness of other NLP models.
+
+---
+
+## 3. Team Members
 
 | Name | Student ID | Role | Contribution |
 |------|------------|------|--------------|
@@ -14,7 +45,7 @@
 
 ---
 
-## 2. Execution Instructions
+## 4. Execution Instructions
 
 **Prerequisites**: Python 3.8+, pip, Internet connection.
 
@@ -34,17 +65,16 @@ python3 app.py
 
 ---
 
-## 3. Deliverables & Submission
+## 5. Deliverables & Submission
 
-
-### 3.1 Reports & Documentation (PDFs)
+### 5.1 Reports & Documentation (PDFs)
 
 | Content | Submitted File (PDF) | Source File | Description |
 | :--- | :--- | :--- | :--- |
 | **Implementation Report (Task A)** | `report.pdf` | Detailed report on SMT design, challenges, and results. Includes flow screenshots. |
 | **Quality Improvement Strategy (Task B)** | `task_b_quality_improvement.pdf` | Analysis of strategies to improve BLEU scores (Data, Models, Domain). |
 
-### 3.2 Code & Project Files
+### 5.2 Code & Project Files
 
 | Requirement | File / Folder Path | Description |
 | :--- | :--- | :--- |
